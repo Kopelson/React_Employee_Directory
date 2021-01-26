@@ -1,7 +1,6 @@
 import React from "react";
 import Tbody from "./Tbody";
 function Table(props) {
-    console.log(props.results);
     return (
         <table className="table">
         <thead>
@@ -14,7 +13,7 @@ function Table(props) {
             </tr>
         </thead>
         <Tbody 
-        results={props.results}
+        results={props.results} key={props.results.email}
         />
         </table>
     );
