@@ -6,7 +6,7 @@ function Navbar(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-between">
         <img src={logo} alt="logo"/>
-        <a className="navbar-brand" href="/">
+        <a className="navbar-brand" href="/React_Employee_Directory/">
         Employee Directory
         </a>
         <Search value={props.value} handleChange={props.handleChange} handleSubmit={props.handleSubmit}/>
