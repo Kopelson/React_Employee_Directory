@@ -2,9 +2,8 @@ import React from "react";
 import Table from "./Table";
 import search from "../components/utils/API";
 import Navbar from "./Navbar";
-
+//This creates the Employee class and returns everything needed for this application
 class Employee extends React.Component {
-    
     //Initialize local state to this.state, and bind event handlers to this method
     constructor(props) {
         super(props);
@@ -25,9 +24,7 @@ class Employee extends React.Component {
     this.setState({
         value: ""
       });
-  
     }
-
     // When this component mounts go query random user api to get a new array of users
     componentDidMount() {
         this.queryRandomUserAPI();
@@ -57,7 +54,7 @@ class Employee extends React.Component {
             employee.phone.toLowerCase().indexOf(this.state.value.toLowerCase()) !== -1)
         //Initialize tableResults variable    
         let tableResults;
-        //Check if we are using the filter or not
+        //Check if need to filter the results array or not
         if(this.state.value === ""){
             tableResults = this.state.results;
         } else {

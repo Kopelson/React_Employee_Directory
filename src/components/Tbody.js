@@ -1,6 +1,7 @@
 import React from "react";
-
+//This maps through the random users and creates a new table row for each user
 function Tbody(props) {
+    //initialize the tableData variable that will be returned to Table
     const tableData = props.results.map((employee) => 
     <tr key={employee.email}>
     <th scope="row">{employee.name.first} {employee.name.last}</th>
@@ -10,7 +11,6 @@ function Tbody(props) {
     <td>{employee.location.city}, {employee.location.state}, {employee.location.country}</td>
     </tr>
     )
-
     return (
         <tbody>
             {tableData}

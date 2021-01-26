@@ -1,5 +1,5 @@
 import React from "react";
-
+//This is a search input form that will filter the random user list
 function Search(props) {
     return (
       <div>

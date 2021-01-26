@@ -1,5 +1,6 @@
 import React from "react";
 import Tbody from "./Tbody";
+//This creates a table that the random users will be entered into and sets the table head for the different columns 
 function Table(props) {
     return (
         <table className="table">
