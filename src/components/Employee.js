@@ -4,6 +4,8 @@ import search from "../components/utils/API";
 import Navbar from "./Navbar";
 
 class Employee extends React.Component {
+    
+    //Initialize local state to this.state, and bind event handlers to this method
     constructor(props) {
         super(props);
         this.state = {
@@ -13,26 +15,30 @@ class Employee extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
       }
-    
+    //handles changes in the searchbar
     handleChange(event) {
     this.setState({value: event.target.value});
     }
-
+    //handles the submit button press of the searchbar
     handleSubmit(event) {
     event.preventDefault();
+    this.setState({
+        value: ""
+      });
+  
     }
 
-    // When this component mounts
+    // When this component mounts go query random user api to get a new array of users
     componentDidMount() {
         this.queryRandomUserAPI();
     }
-
+    //the search method is in utils/API used to get a json of 100 random users
     queryRandomUserAPI = () => {
         search()
         .then(res => this.setState({ results: res.data.results }))
           .catch(err => console.log(err));
       };
-    
+    //this paints the Employee component
     render(){
         //This sets filters the results array based checking first name, last name, email, location (city, state, country) and phone number
         let searchBarFilter = this.state.results.filter(employee => 
