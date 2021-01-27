@@ -9,10 +9,12 @@ class Employee extends React.Component {
         super(props);
         this.state = {
             value: '',
-            results: []
+            results: [],
+            sort: true
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSort = this.handleSort.bind(this);
       }
     //handles changes in the searchbar
     handleChange(event) {
@@ -24,6 +26,11 @@ class Employee extends React.Component {
     this.setState({
         value: ""
       });
+    }
+    //handles sort button on table head
+    handleSort() {
+        this.state.sort === true ? this.setState({sort: false}) : this.setState({sort: true})
+
     }
     // When this component mounts go query random user api to get a new array of users
     componentDidMount() {
@@ -65,7 +72,7 @@ class Employee extends React.Component {
             <div>
             <Navbar value={this.state.value} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
             <div className="container-fluid">
-                <Table results={tableResults} handleClose={this.handleClose} handleShow={this.handleShow} />
+                <Table results={tableResults} sort={this.state.sort} handleSort={this.handleSort} handleClose={this.handleClose} handleShow={this.handleShow} />
             </div>
             </div>
         );
