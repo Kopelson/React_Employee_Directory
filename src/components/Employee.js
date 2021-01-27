@@ -65,7 +65,7 @@ class Employee extends React.Component {
             <div>
             <Navbar value={this.state.value} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
             <div className="container-fluid">
-                <Table results={tableResults} />
+                <Table results={tableResults} handleClose={this.handleClose} handleShow={this.handleShow} />
             </div>
             </div>
         );

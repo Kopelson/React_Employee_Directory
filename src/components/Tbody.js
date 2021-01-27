@@ -1,10 +1,16 @@
 import React from "react";
+import InfoModal from "./InfoModal";
 //This maps through the random users and creates a new table row for each user
 function Tbody(props) {
     //initialize the tableData variable that will be returned to Table
+    
     const tableData = props.results.map((employee) => 
     <tr key={employee.email}>
-    <th scope="row">{employee.name.first} {employee.name.last}</th>
+    <th scope="row">
+        {<InfoModal 
+        params={employee}
+        />}
+    </th>
     <td><img className="img-fluid img-thumbnail" src={employee.picture.medium} alt={employee.name.first} /></td>
     <td>{employee.email}</td>
     <td>{employee.phone}</td>
