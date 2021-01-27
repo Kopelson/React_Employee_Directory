@@ -7,7 +7,6 @@ function InfoModal(props) {
   
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    console.log(props)
     return (
         
       <div key={props.params.name.first}>
