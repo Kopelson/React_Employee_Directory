@@ -1,3 +1,79 @@
+# React Employee Directory
+
+## Description
+This application is an employee directory that was built using React. I learned how to break up the application's UI into components, manage component state, and respond to user events. When the application loads it pulls in a 100 random users from randomuser.me API. The table can be sorted alphabetically, actively search by name, phone number, and location, and each employee can be clicked on to display more a modal with information. 
+
+## Table of Contents
+
+* [Overview](#overview)
+* [React](#react)
+* [Credits](#credits)
+
+## Overview 
+
+![main](https://user-images.githubusercontent.com/57735283/106030228-cf9b2b80-6082-11eb-885e-13683e0f09da.PNG)
+
+Project Link: https://kopelson.github.io/React_Employee_Directory/
+
+
+### Modal
+![modal](https://user-images.githubusercontent.com/57735283/106030023-92369e00-6082-11eb-810f-e218313bc026.gif)
+
+<p>When a user clicks on an employee's name a modal opens with more details about the employee.</p>
+
+### Active Search
+![search](https://user-images.githubusercontent.com/57735283/106030026-92cf3480-6082-11eb-9b83-d7a05e874dc9.gif)
+
+<p>User's can activly search through the table by name, phone number, or location.</p>
+
+### Sort
+![sort](https://user-images.githubusercontent.com/57735283/106030027-92cf3480-6082-11eb-912c-75ddffd763a7.gif)
+
+<p>The table can be alphabetically be sorted by first name</p>
+
+### Documentation 
+<ul>
+  <li>React - https://reactjs.org/docs/getting-started.html</li>
+  <li>Components and Props - https://reactjs.org/docs/components-and-props.html</li>
+  <li>Constructors - https://reactjs.org/docs/react-component.html#constructor</li>
+  <li>State - https://reactjs.org/docs/faq-state.html#gatsby-focus-wrapper</li>
+  <li>useState() - https://reactjs.org/docs/hooks-reference.html#usestate</li>
+  <li>setState() - https://reactjs.org/docs/faq-state.html#what-does-setstate-do</li>
+  <li>componentDidMount() - https://reactjs.org/docs/react-component.html#componentdidmount</li>
+  <li>render() - https://reactjs.org/docs/rendering-elements.html</li>
+  <li>ReactDOM.render() - https://reactjs.org/docs/rendering-elements.html#updating-the-rendered-element</li>
+</ul>
+
+### Extras
+<ul>
+  <li>Fontawesome - for the sort icon</li>
+  <li>Axios - to make ajax get request to randomuser.me/api</li>
+  <li>Bootstrap - for css styling</li>
+  <li>React-Bootstrap - to create bootstrap modal and button component</li>
+</ul>
+
+## User Story
+
+* As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
+
+## Business Context
+
+An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
+
+## Acceptance Criteria
+
+Given a table of random users generated from the [Random User API](https://randomuser.me/), when the user loads the page, a table of employees should render. 
+
+The user should be able to:
+
+  * Sort the table by at least one category
+
+  * Filter the users by at least one property.
+
+## Credits
+* Trilogy Education Services for project setup
+
+## React
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
