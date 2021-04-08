@@ -1,6 +1,5 @@
-# React Employee Directory
+# React Employee Directory : 
 
-## Description
 This application is an employee directory that was built using React. I learned how to break up the application's UI into components, manage component state, and respond to user events. When the application loads it pulls in a 100 random users from randomuser.me API. The table can be sorted alphabetically, actively search by name, phone number, and location, and each employee can be clicked on to display more a modal with information. 
 
 ## Table of Contents
